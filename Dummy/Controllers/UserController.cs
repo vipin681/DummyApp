@@ -13,6 +13,7 @@ namespace Dummy.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
+        //nkdsnasd
         // GET: api/User
         public IEnumerable<string> Get()
         {
