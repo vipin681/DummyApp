@@ -24,6 +24,7 @@ namespace BAL
             sqlparam[6] = new SqlParameter("@paramIsActive",entUser.IsActive);
            return dam.ExecuteNonQuery("Sp_InsertUpdateUserDetail", sqlparam);
         }
+
       
     }
 }
