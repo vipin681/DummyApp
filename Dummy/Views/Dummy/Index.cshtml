@@ -1,0 +1,86 @@
+﻿@*@Scripts.Render("~/js/app.js")
+    @Scripts.Render("~/js/angular.js")*@
+@Styles.Render("~/css/bootstrap.css")
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/js/app.js"></script>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body  ng-app="myApp">
+    <div ng-controller="employeeController" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">User Registration</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <strong class="error">{{error}}</strong>
+                <form name="addemployee" style="width: 600px; margin: 0px auto;">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="fname" class="col-sm-2 control-label">First Name:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="cname" placeholder="please enter your first name" ng-model="UserDetail.FirstName" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="Lname" class="col-sm-2 control-label">Last Name:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="lname" placeholder="please enter last name" ng-model="UserDetail.LastName" required></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="phone" class="col-sm-2 control-label">Mobile No:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="phone" placeholder="please enter your mobile" ng-model="UserDetail.Phone" required />
+                            </div>
+
+                        </div>
+                        </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="email" class="col-sm-2 control-label">Email:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="email" placeholder="please enter your email" ng-model="UserDetail.email" required />
+                            </div>
+                        </div>
+                        </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="password" class="col-sm-2 control-label">Password:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="password" placeholder="please enter your password" ng-model="UserDetail.Password" required />
+                            </div>
+                        </div>
+                        </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="role" class="col-sm-2 control-label">Role:</label>
+                            <div class="col-sm-10 space">
+                                <input type="text" class="form-control" id="role" placeholder="please enter your role" ng-model="UserDetail.Role" required />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group space">
+                        <div class="col-sm-offset-2 col-sm-10">
+                           
+                            <input type="submit" value="Add" ng-click="add()" ng-show="addShow" ng-disabled="!addemployee.$valid" class="btn btn-primary" />
+                           
+                        </div>
+                    </div>
+                    <br />
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
