@@ -8,7 +8,7 @@ namespace Dummy.Controllers
 {
     public class DummyController : Controller
     {
-        // GET: Dummy
+        // GET: Dummy Index
         public ActionResult Index()
         {
             return View();
