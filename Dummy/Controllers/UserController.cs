@@ -28,6 +28,14 @@ namespace Dummy.Controllers
 
         // POST: api/User
        // [HttpPost]
+       [HttpGet]
+       public HttpResponseMessage GetUserdetail()
+        {
+            UserBLL user1 = new UserBLL();
+            user1.GetAllUser();
+            
+            return Request.CreateResponse(HttpStatusCode.OK, "Get All Record.");
+        }
       
         [HttpPost]
         public HttpResponseMessage Savedata(User user)

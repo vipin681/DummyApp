@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DAL;
 using Model;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace BAL
 {
@@ -24,7 +25,10 @@ namespace BAL
             sqlparam[6] = new SqlParameter("@paramIsActive",entUser.IsActive);
            return dam.ExecuteNonQuery("Sp_InsertUpdateUserDetail", sqlparam);
         }
-
+        public DataTable GetAllUser()
+        {
+            return dam.DataSet("Sp_GetUserDetail");
+        }
       
     }
 }
